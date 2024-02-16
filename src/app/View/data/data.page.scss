@@ -1,0 +1,140 @@
+#cabecera {
+    color: #154360;
+    --background: #ECF0F1;
+
+    ion-title {
+        font-size: 18px;
+    }
+}
+
+ion-content {
+    --background: #ECF0F1;
+
+    ion-searchbar {
+        --background: #ffffff;
+        color: #000;
+        font-size: 16px;
+    }
+    
+    #Present{
+        text-align: center;
+        box-shadow: 5px 5px 5px #154360;
+        border: #154360 1px solid;
+        --background: #ffffff;
+
+        ion-card-title {
+            --color: #154360;
+        }
+
+        ion-label {
+            --color: #000;
+        }
+        
+        ion-img{
+            width: 76px;
+            margin-left: 8rem;
+        }
+
+        ion-button {
+            font-size: 32px;
+            
+            #more{
+                color: #1B2631;
+            }
+        }
+    }
+
+    ion-list {
+        background: #ffffff;
+        ion-button {
+            font-size: 16px;
+
+            .Add{
+                color: #2ECC71;
+            }
+
+            .delt{
+                color: #CB4335;
+            }
+        }
+    }
+
+    #Reminder{
+        box-shadow: 5px 5px 5px #154360;
+        border: #154360 1px solid;
+        --background: #ffffff;
+
+        ion-card-title {
+            --color: #154360;
+        }
+
+        ion-card-content {
+            --background: #ffffff;
+            color: #000;
+        }
+
+        ion-item {
+            --background: #ffffff;
+            color: #000;
+        }
+
+        ion-col {
+            ion-label {
+                size: 5px;
+            }
+        }
+            
+    }
+}
+ion-footer{
+    height: 3rem;
+
+    .nav{
+        background: #ECF0F1;
+    }
+    
+    ion-button {
+        --background: #ECF0F1;
+        height: 3rem;
+        width: 3rem;
+        color: #154360;
+    }
+    #home{
+        margin-left: 1.5rem;
+        ion-icon {
+            font-size: 28px;
+        }
+    }
+    #horario{
+        margin-left: 1.5rem;
+        ion-icon {
+            font-size: 28px;
+        }
+    }
+    #More{
+        margin-left: 1.5rem;
+        ion-icon {
+            font-size: 28px;
+        }
+    }
+    #datos{
+        margin-left: 1.5rem;
+        ion-icon {
+            font-size: 28px;
+        }
+    }
+    #profile{
+        margin-left: 1.5rem;
+        ion-icon {
+            font-size: 28px;
+        }
+    }
+}
+
+.fecha-hora {
+    font-weight: bold;
+}
+  
+.enfermedades {
+    font-style: italic;
+}

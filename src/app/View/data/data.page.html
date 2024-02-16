@@ -1,0 +1,122 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar mode="ios" id="cabecera">
+    <ion-title>Reminder</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-searchbar mode="ios" animated="true" placeholder="Reminder"></ion-searchbar>
+  <ion-card id="Present">
+    <ion-card-header>
+      <ion-card-title>Add Reminder</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label>Add a reminder to help you use your medicines regularly</ion-label>
+      <br>
+      <br>
+      <ion-button (click)="presentAlert()" shape="round" fill="clear">
+        <ion-icon name="close-circle" id="more"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card id="Reminder">
+    <ion-card-header>
+      <ion-card-title>Today Reminders</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-grid fixed>
+            <ion-row>
+              <ion-col size="9">
+                Example
+                <ion-label><h3>Medicine is used every 12 hours</h3></ion-label>
+                <ion-label><p>Sun, Wed, Fri</p></ion-label>
+                <br>
+                <ion-button fill="clear" shape="round">
+                  <ion-icon name="create-outline" class="Add"></ion-icon>
+                </ion-button>
+              </ion-col>
+              <ion-col size="3">
+                <ion-toggle [checked]="true"></ion-toggle>
+                <ion-label><p>9:30 am</p></ion-label>
+                <ion-label><p>21:30 pm</p></ion-label>
+                <ion-button shape="round" fill="clear">
+                  <ion-icon name="trash" class="delt"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+        <ion-item>
+          <ion-grid fixed>
+            <ion-row>
+              <ion-col size="9">
+                Example 2
+                <ion-label><h3>Medicine is used every 12 hours</h3></ion-label>
+                <ion-label><p>Mon and Sat</p></ion-label>
+                <br>
+                <ion-button fill="clear" shape="round">
+                  <ion-icon name="create-outline" class="Add"></ion-icon>
+                </ion-button>
+              </ion-col>
+              <ion-col size="3">
+                <ion-toggle [checked]="false"></ion-toggle>
+                <ion-label><p>8:10 am</p></ion-label>
+                <ion-label><p>20:10 pm</p></ion-label>
+                <ion-button shape="round" fill="clear">
+                  <ion-icon name="trash" class="delt"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+        <ion-item>
+          <ion-grid fixed>
+            <ion-row>
+              <ion-col size="9">
+                Example 3
+                <ion-label><h3>Medicine is used every 12 hours</h3></ion-label>
+                <ion-label><p>Tue, Thu, Sun</p></ion-label>
+                <br>
+                <ion-button fill="clear" shape="round">
+                  <ion-icon name="create-outline" class="Add"></ion-icon>
+                </ion-button>
+              </ion-col>
+              <ion-col size="3">
+                <ion-toggle [checked]="true"></ion-toggle>
+                <ion-label><p>12:00 am</p></ion-label>
+                <ion-label><p>24:30 pm</p></ion-label>
+                <ion-button shape="round" fill="clear">
+                  <ion-icon name="trash" class="delt"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <div class="nav">
+    <ion-buttons slot="start">
+      <ion-button id="home" [routerLink]="['/home']">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+      <ion-button id="horario" [routerLink]="['/data']">
+        <ion-icon name="alarm" ></ion-icon>
+      </ion-button>
+      <ion-button id="More" (click)="mostrarAlerta()">
+        <ion-icon name="add-circle"></ion-icon>
+      </ion-button>
+      <ion-button id="datos" [routerLink]="['/data']">
+        <ion-icon name="calendar"></ion-icon>
+      </ion-button>
+      <ion-button id="profile" [routerLink]="['/profile']">
+        <ion-icon name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+</ion-footer>

@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" [routerLink]="['/log-in']">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div id="header">
+    <h1>Create your <br> Account</h1>
+    <img src="assets/img/icon.png" alt="Icono">
+  </div>
+  <form id="form">
+    <app-input type="text" placeholder="Name" #input1 (input)="validateForm()"></app-input>
+    <br>
+    <app-input type="text" placeholder="Nickname" #input2 (input)="validateForm()"></app-input>
+    <br>
+    <app-input type="text" placeholder="Email" #input3 (input)="validateForm()"></app-input>
+    <br>
+    <app-input type="password" placeholder="Password" #input4 (input)="validateForm()"></app-input>
+    <br>
+    <ion-button expand="block" shape="round" [disabled]="!isValidForm" type="submit" (click)="continuar()">
+      Siguiente
+    </ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Enfermedad</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let paciente of datosTabla"> <!-- Usamos datosTabla aquí -->
+      <td>{{ paciente.nombre }}</td>
+      <td>{{ paciente.enfermedad }}</td>
+      <td>
+        <button (click)="editarPaciente(paciente)">Editar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="nuevoPaciente()">Agregar Paciente</button>

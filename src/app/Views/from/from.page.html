@@ -1,0 +1,54 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar mode="ios">
+    <ion-title>From</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div [formGroup]="formulario">
+    <div class="datos">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Datos del Paciente</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-label><h2>Nombre:</h2></ion-label>
+          <ion-input type="text" label="Nombre" label-placement="floating" fill="outline" placeholder="Nombre"
+            formControlName="nombre"></ion-input>
+          <ion-label><h2>Nombre de la Enfermedad:</h2></ion-label>
+          <ion-input type="text" label="Nombre de la Enfermedad" label-placement="floating" fill="outline"
+            placeholder="Nombre de la Enfermedad" formControlName="enfermedad"></ion-input>
+          <ion-label><h2>Nombre del Medicamento:</h2></ion-label>
+          <ion-input type="text" label="Nombre del Medicamento" label-placement="floating" fill="outline"
+            placeholder="Nombre del Medicamento" formControlName="medicina"></ion-input>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div class="horario">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Hirario</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-label><h2>Fecha y Hora de Inicio:</h2></ion-label>
+          <ion-datetime id="datetime" formControlName="fechaInicio"></ion-datetime>
+          <ion-label><h2>Por cuántos Días:</h2></ion-label>
+          <ion-input type="number" label="Por cuántos Días" label-placement="floating" fill="solid"
+            placeholder="Por cuántos Días" formControlName="dias" min="0"></ion-input>
+          <ion-label><h2>Cada cuánto tiempo:</h2></ion-label>
+          <ion-input type="number" label="Cada cuánto tiempo" label-placement="floating" fill="solid"
+            placeholder="Cada cuánto tiempo" formControlName="tiempo" min="0"></ion-input>
+        </ion-card-content>
+        <ion-button [disabled]="!formulario.valid" expand="block" (click)="guardar()">Guardar</ion-button>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button slot="end" shape="round" [disabled]="!primerGuardadoRealizado" (click)="siguiente()">
+      Siguiente
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

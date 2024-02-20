@@ -1,0 +1,25 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar mode="ios">
+    <ion-title>Bienvenido</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="Salir()">
+        <ion-icon name="power"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="cont">
+    <div class="diseño">
+      <img src="assets/img/enfermera.png" alt="Muñeco" class="Robot">
+      <div class="burbuja">{{ Message }}</div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <app-nav-bar></app-nav-bar>
+  </ion-toolbar>
+</ion-footer>

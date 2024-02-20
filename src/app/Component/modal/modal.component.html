@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button id="cancelar" (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title>Datos del Usuario</ion-title>
+    <ion-buttons slot="end">
+      <ion-button id="confirmar" (click)="confirm()" [strong]="true">Confirm</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-input labelPlacement="stacked" label="Ingresa tu nombre:" [(ngModel)]="name" placeholder="Your name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Ingresa tu género:</ion-label>
+    <ion-select [(ngModel)]="age" placeholder="Selecciona tu edad">
+      <ion-select-option *ngFor="let option of ageOptions" [value]="option">{{ option }}</ion-select-option>
+    </ion-select>
+  </ion-item>  
+  <ion-item>
+    <ion-label position="stacked">Ingresa tu género:</ion-label>
+    <ion-select [(ngModel)]="sex" placeholder="Selecciona tu género">
+      <ion-select-option value="Masculino">Masculino</ion-select-option>
+      <ion-select-option value="Femenino">Femenino</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-content>

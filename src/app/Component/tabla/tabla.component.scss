@@ -1,0 +1,30 @@
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Estilos para los botones */
+  button {
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espacio interno */
+    border: none; /* Quita el borde */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Cambia el color de fondo al pasar por encima */
+  }
+  

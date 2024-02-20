@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Configuración</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+      <!-- Modo oscuro -->
+      <ion-item>
+        <ion-label>Modo oscuro</ion-label>
+        <ion-toggle [(ngModel)]="modoOscuro"></ion-toggle>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <!-- Idioma -->
+      <ion-item>
+        <ion-label>Idioma</ion-label>
+        <ion-select [(ngModel)]="idioma">
+          <ion-select-option value="es">Español</ion-select-option>
+          <ion-select-option value="en">Inglés</ion-select-option>
+          <!-- Agrega más opciones de idioma según sea necesario -->
+        </ion-select>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <!-- Tamaño de fuente -->
+      <ion-item>
+        <ion-label>Tamaño de fuente</ion-label>
+        <ion-range [(ngModel)]="tamanioFuente" min="12" max="24" step="1">
+          <ion-icon slot="start" size="small" name="text"></ion-icon>
+          <ion-icon slot="end" name="text"></ion-icon>
+        </ion-range>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <!-- Fuente de letra -->
+      <ion-item>
+        <ion-label>Fuente de letra</ion-label>
+        <ion-select [(ngModel)]="fuenteLetra">
+          <ion-select-option value="sans-serif">Sans-serif</ion-select-option>
+          <ion-select-option value="serif">Serif</ion-select-option>
+          <!-- Agrega más opciones de fuente de letra según sea necesario -->
+        </ion-select>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <!-- Notificaciones -->
+      <ion-item>
+        <ion-label>Notificaciones</ion-label>
+        <ion-toggle [(ngModel)]="notificaciones"></ion-toggle>
+      </ion-item>
+    </ion-card>
+
+  <ion-button expand="block" color="primary" (click)="guardarConfiguracion()" (click)="onClick()">Guardar</ion-button>
+</ion-content>

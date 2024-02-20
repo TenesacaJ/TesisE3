@@ -1,0 +1,22 @@
+ion-toolbar {
+    --background: #ecf0f1;
+    --color: #154360;
+    text-align: center;
+
+    #cancelar{
+        color: #641E16;
+    }
+
+    #confirmar{
+        color: #145A32;
+    }
+}
+ion-content {
+    --background: #ecf0f1;
+
+    ion-item {
+        --background: #ffffff;
+        color: #154360;
+        margin-bottom: 2rem;
+    }
+}
